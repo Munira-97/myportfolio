@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-image: linear-gradient(90deg,#ed34da,#4ddcd7, #4d95dc);
+}
+.nav-l{
+    color: rgb(154, 19, 12);
+    font-size: 20px;
+    font-weight: 600px;
+}
+.nav-l:hover{
+    color: rgb(255, 184, 113);
+}
+
+.parent{
+    display: flex;
+    justify-content: space-around;
+}
+.cardsoto{
+    width: 60%;
+}
+.child{
+    width: 50px;
+    height: 80px;
+    
+    transition: transform 3s;
+}
+.child:hover{
+    transform: scale(1.3);
+}
+.card,.card-header,.card-body,.card-footer,.container,.col-4,.col-8{
+    border: 0px;
+}
+.dsply{
+    display: none;
+}
+.bcgrnd{
+    background-image: linear-gradient(90deg,#ed34da,#4ddcce);
+}
+.btn{
+    padding: 12px;
+    background-color: transparent;
+    box-shadow: 5px 5px 15px 5px gray;
+    
+   
+    border: none;
+    border-radius: 6%;
+
+}
+.btn:hover{
+    box-shadow: 2px 2px 15px 5px rgb(63, 232, 196);
+    
+}
+.logo{
+   font-size: 25px;
+   font-weight: 500px;
+   
+    color: rgb(42, 148, 130);
+   
+    font-weight: 600;
+}
+#nm{
+    font-family: "Brush Script MT", Cursive;
+}
+#wd{
+    font-family: "Brush Script MT", Cursive ;
+  
+}
+.ani{
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+    
+
+}
+.mtn{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+
+}
+.home-content p{
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.imgbody{
+    min-height: 10vh;
+    display: grid;
+    place-items: center; 
+}
+.slider{
+    height: 250px;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.slide-track{
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+}
+@keyframes scroll{
+    0% {
+        transform: translateX(0)
+    }
+    100%{
+        transform:translateX(calc(-250px * 9));
+    }
+}
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+.imgd{
+    width: 100%;
+    transition: transform 1s;
+}
+.imgd:hover{
+   transform: translateZ(20px);
+}
+.slider::before,
+.slider::after{
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 1%;
+    z-index: 2;
+}
+.slider::before{
+    left: 0;
+    top: 0;
+}
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+   /* skills section styling */
+   .skills{
+    height: 500px;
+    background-image: linear-gradient(120deg rgb(0, 255, 255), rgb(255, 0, 238));
+   }
+   .abtxt{
+    text-align: center;
+    text-decoration: underline 2px dashed;
+    font-family: 'Times New Roman', Times, serif;
+    color: #4ddcce;
+
+}
+        
+   .skills .skills-content
+   {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: space-between;
+   }
+
+
+
+   .skills .title::after {
+       content: "what i know";
+   }
+
+   .skills .skills-content .column {
+       width: calc(50% - 30px);
+   }
+
+   
+
+   .skills .skills-content .left p {
+       text-align: justify;
+   }
+
+  
+   .skills .skills-content .right .bars {
+       margin-bottom: 15px;
+   }
+
+   .skills .skills-content .right .info {
+       display: flex;
+       margin-bottom: 5px;
+       align-items: center;
+       justify-content: space-between;
+   }
+
+   .skills .skills-content .right span {
+       font-weight: 500;
+       font-size: 18px;
+   }
+
+   .skills .skills-content .right .line {
+       height: 5px;
+       width: 100%;
+       background: lightgrey;
+       position: relative;
+   }
+
+   .skills .skills-content .right .line::before {
+       content: "";
+       position: absolute;
+       height: 100%;
+       left: 0;
+       top: 0;
+       background: rgb(20, 213, 220);
+   }
+
+   .skills-content .right .html::before {
+       width: 90%;
+   }
+
+   .skills-content .right .css::before {
+       width: 60%;
+   }
+
+   .skills-content .right .js::before {
+       width: 80%;
+   }
+
+   .skills-content .right .php::before {
+       width: 50%;
+   }
+
+   .skills-content .right .Bootstrap::before {
+       width: 70%;
+   }
+
+   .hidden{
+    display: none;
+   }
+   .skills{
+            
+    position: relative;
+    animation-name: bottom-top-abotme;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+}
+/*work ex style*/
+ .card-div{
+            width: 100%; 
+            height: 600px;
+          
+        }
+        .cards{
+            
+            
+            display: flex; 
+            justify-content: space-around;
+            
+        }
+        
+        .c{
+            border: 2px solid;
+            box-shadow: 2px 2px 20px rgb(0, 0, 0);
+            width: 450px;
+            height: 500px;
+        
+            
+            
+        }
+       
+        .animationwe{
+            position: relative;
+            animation-name: bottom-top-we;
+            animation-duration: 4s;
+            animation-delay: 0.5s;
+        }
+        @keyframes bottom-top-we{
+            from {
+                
+                top: -1200px;
+            }
+            to{
+                top: 0px;
+            }
+        }
+
+
+@keyframes bottom-top-abotme{
+    from {
+        top: -500px;
+    }
+    to{
+        
+        top: 0px;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .logo{
+        font-size: 8px;
+    }
+    
+}
+
+
+@media screen and (max-width:600px) {
+    .nav-l{
+        font-size: 8px;
+    }
+    .imgdiv{
+        position: relative;
+        top: 0px;
+        right: 22%;
+    }
+    .box{
+        height: 80vh;
+    }
+    
+}
+@media only screen and (max-width: 767px){
+    .cards{
+        flex-wrap: wrap;
+        
+    }
+    .c{
+        margin-top: 5px;
+    }
+
+}
+/*icon style*/
+.home-icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    
+    border-radius: 100%;
+    font-size: 40px;
+   
+    color: rgb(180, 180, 77);
+    
+    text-decoration: none;
+}
+
+.home-icon a:hover{
+    background: #26edd9;
+    color: #050606;
+    border-radius: 100%;
+    box-shadow: 0 0 30px #26edd9;
+    font-size: 30px;
+}
+/*my skills*/
+.box{
+    display: flex;
+    height: 45vh;
+    align-items: center;
+}
+.myskl{
+    font-family: "Brush Script MT", Cursive;
+}
+.animation{
+    position: relative;
+    animation-name: abc;
+    animation-duration: 10s;
+    animation-delay: 0.10s;
+}
+@keyframes abc{
+    from{
+        left: -500px;
+    }
+    to{
+        left: 0;
+    }
+}
